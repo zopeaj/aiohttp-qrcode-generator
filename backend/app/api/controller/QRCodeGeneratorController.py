@@ -48,5 +48,11 @@ def generateDataCodes(request):
     return Response(body=content, status=200, content_type='image/png')
 
 
+# POST: http://127.0.0.1:8000/generateqrcode/
+# GET: http://127.0.0.1:8000/generateqrcode/{filename}
+# GET: http://127.0.0.1:8000/generateqrcode/?datatoencode=&scale=8&filename=qrcodegenerator
 
-# /generateqrcode/?datatoencode=f65acbb5e937426a9c403b1c97d6f287&scale=8
+
+
+
+

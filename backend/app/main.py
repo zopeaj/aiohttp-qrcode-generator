@@ -7,6 +7,8 @@ load_dotenv()
 path = os.environ["FILE_PATH"]
 sys.path.append(path)
 
+# print(path)
+
 from aiohttp import web
 from app.api.routes import setup_routes
 
