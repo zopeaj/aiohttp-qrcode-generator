@@ -8,12 +8,14 @@ sys.path.append(path)
 
 from app.core.business.abstracts.QRCodeGeneratorService import QRCodeGeneratorService
 from aiohttp.web import RouteTableDef, Response, StreamResponse
+from fastapi import Depends
+from sqlalchemy.orm import Session
 
 qrcodeGenroutes = RouteTableDef()
 qrcodeGeneratorService = QRCodeGeneratorService()
 
 @qrcodeGenroutes.post("/generateqrcode/")
-async def postDatatoGenerateQRCode(request):
+async def postDatatoGenerateQRCode(request, db: Depends(Session)):
     data = await request.json()
     filename = data['filename']
     datatoencode = data["datatoencode"]
