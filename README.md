@@ -25,9 +25,7 @@ GET: http://127.0.0.1:8082/generateqrcode/56051e722e9b4e7fa4870d62ed050c23.png
 ```
 ![generated-data](https://user-images.githubusercontent.com/59841476/229289058-9dc3ffe0-ce71-4c62-b31d-47d7d82ce599.png)
 
-
 ## Using GET http Method to retrieve the qrcode file resource
 ```
 GET: http://127.0.0.1:8082/generateqrcode/codefiledata.png
 ```
-![qrcode-generator](https://user-images.githubusercontent.com/59841476/229288910-8d24003b-112c-43f7-a858-f69db1562a72.png)
