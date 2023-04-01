@@ -14,7 +14,7 @@ from sqlalchemy.orm import Session
 qrcodeGenroutes = RouteTableDef()
 qrcodeGeneratorService = QRCodeGeneratorService()
 
-@qrcodeGenroutes.post("/generateqrcode/")
+@qrcodeGenroutes.post("/generateqrcode")
 async def postDatatoGenerateQRCode(request, db: Depends(Session)):
     data = await request.json()
     filename = data['filename']
